@@ -14,8 +14,8 @@ Demonstrate how to use VOICEROID2/A.I.VOICE Editor API to control the app to spe
 ### VOICEROID2
 For VOICEROID2, you can import `AI.Talk.Editor.Api.dll` from VOICEROID2 itself to access the API.
 
-* If you're using 64bit VOICEROID2, your program have to be 64bit. Use `ttsControl.Initialize("VOICEROID2 (x64)");` to initialize.
-* If you're using 64bit VOICEROID2, your program have to be 32bit. Use `ttsControl.Initialize("VOICEROID2");` to initialize.
+* When using 64bit VOICEROID2, your program have to be 64bit. Use `ttsControl.Initialize("VOICEROID2 (x64)");` to initialize.
+* When using 32bit VOICEROID2, your program have to be 32bit. Use `ttsControl.Initialize("VOICEROID2");` to initialize.
 
 ### A.I.VOICE
 For A.I.VOICE, currently you must use `AI.Talk.Editor.Api.dll` from this repo (also appeared in `VOICeVIO.RemoteControl.CLI`) to access the API.
