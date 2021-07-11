@@ -16,6 +16,8 @@ This project requires VS 2019 or higher to build.
 
 You have to manually add dlls from VOICEROID2.
 
+By default, we built for VOICEROID2 64bit. If your target is VOICEROID2 32bit, you have to set target platform for all projects. 
+
 If you cannot figure this out, just download binaries from Release page. There is no support for this project.
 
 ## License

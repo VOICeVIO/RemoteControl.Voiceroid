@@ -32,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AI.Talk.Editor.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=19e2dda61cb280cb, processorArchitecture=MSIL">
