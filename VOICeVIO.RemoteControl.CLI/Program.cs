@@ -14,7 +14,7 @@ namespace VOICeVIO.RemoteControl.CLI
             //{
             //    Console.WriteLine(availableHostName);
             //}
-            tts.Initialize("VOICEROID2 (x64)");
+            tts.Initialize("A.I.VOICE");
             //tts.StartHost(); //StartHost Currently only works for VOICEROID2 (x64)
             //await Task.Delay(10000);
 
@@ -24,11 +24,11 @@ namespace VOICeVIO.RemoteControl.CLI
             }
             catch
             {
-                Console.WriteLine("Can not connect to VOICEROID2. Please launch VOICEROID2 before this program.");
+                Console.WriteLine("Can not connect to VOICEROID2/A.I.VOICE. Please launch app before this program.");
                 Console.ReadLine();
                 return;
             }
-            Console.WriteLine($"Connected to Voiceroid2: {tts.Version}");
+            Console.WriteLine($"Connected to A.I.VOICE: {tts.Version}");
             Console.WriteLine("Current Available Voice Presets:");
             for (var i = 0; i < tts.VoicePresetNames.Length; i++)
             {
@@ -36,7 +36,7 @@ namespace VOICeVIO.RemoteControl.CLI
                 Console.WriteLine($"[{i:D2}] {voice}");
             }
 
-            var selectedVoice = "結月ゆかり";
+            var selectedVoice = "琴葉 茜";
             Console.WriteLine("Input a number to select voice:");
             var input = Console.ReadLine()?.Trim();
             if (int.TryParse(input, out var num))

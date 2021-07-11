@@ -9,10 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AI.Framework.App.XmlSerializers</RootNamespace>
     <AssemblyName>AI.Framework.App.XmlSerializers</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <LangVersion>9.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,7 +35,7 @@
   <ItemGroup>
     <Reference Include="AI.Framework.Wpf, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ref\AI.Framework.Wpf.dll</HintPath>
+      <HintPath>..\ref\aivoice\AI.Framework.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="AI.Talk.Editor.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=19e2dda61cb280cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -42,7 +43,7 @@
     </Reference>
     <Reference Include="AI.Talk.Editor.Core, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ref\AI.Talk.Editor.Core.dll</HintPath>
+      <HintPath>..\ref\aivoice\AI.Talk.Editor.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
