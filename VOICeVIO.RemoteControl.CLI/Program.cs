@@ -10,6 +10,10 @@ namespace VOICeVIO.RemoteControl.CLI
         static async Task Main(string[] args)
         {
             var tts = new TtsControl();
+            //foreach (var availableHostName in tts.GetAvailableHostNames())
+            //{
+            //    Console.WriteLine(availableHostName);
+            //}
             tts.Initialize("VOICEROID2 (x64)");
             //tts.StartHost(); //StartHost Currently only works for VOICEROID2 (x64)
             //await Task.Delay(10000);
@@ -24,7 +28,7 @@ namespace VOICeVIO.RemoteControl.CLI
                 Console.ReadLine();
                 return;
             }
-            Console.WriteLine("Connected to Voiceroid2.");
+            Console.WriteLine($"Connected to Voiceroid2: {tts.Version}");
             Console.WriteLine("Current Available Voice Presets:");
             for (var i = 0; i < tts.VoicePresetNames.Length; i++)
             {
