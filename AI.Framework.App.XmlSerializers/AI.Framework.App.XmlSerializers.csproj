@@ -36,6 +36,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ref\AI.Framework.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="AI.Talk.Editor.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=19e2dda61cb280cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AI.Talk.Editor.Api.dll</HintPath>
+    </Reference>
     <Reference Include="AI.Talk.Editor.Core, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ref\AI.Talk.Editor.Core.dll</HintPath>
@@ -44,9 +48,6 @@
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Xml" />
-    <Reference Include="VOICEROID2.AI.Talk.Editor.Api">
-      <HintPath>..\Lib\VOICEROID2.AI.Talk.Editor.Api.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
