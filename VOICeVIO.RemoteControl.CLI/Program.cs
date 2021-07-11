@@ -52,6 +52,11 @@ namespace VOICeVIO.RemoteControl.CLI
             tts.MasterControl = master;
 
             Console.WriteLine("Sending Text...");
+            tts.Text = "マイクテスト";
+            tts.Play();
+            await WaitTillIdle(tts);
+            tts.Stop();
+
             tts.Text = "あなたを神像へと嵌め込みましょう！";
             Console.WriteLine($"Play Time: {tts.GetPlayTime()}");
             await WaitTillIdle(tts);
@@ -66,9 +71,26 @@ namespace VOICeVIO.RemoteControl.CLI
             tts.WriteWaveToFile("output.wav");
             await WaitTillIdle(tts);
 
-            Console.WriteLine("All done! Press Enter to exit.");
-            Console.ReadLine();
-            tts.Disconnect();
+            Console.WriteLine("All done! Type quit to exit. Type any other words to speak.");
+            while (true)
+            {
+                var text = Console.ReadLine()?.Trim();
+                if (!string.IsNullOrWhiteSpace(text))
+                {
+                    if (text.ToLowerInvariant() == "quit")
+                    {
+                        Console.WriteLine("Bye~");
+                        tts.Disconnect();
+                        return;
+                    }
+
+                    await WaitTillIdle(tts);
+                    tts.Stop();
+                    tts.Text = text;
+                    tts.Play();
+                    await WaitTillIdle(tts);
+                }
+            }
         }
 
         static async Task WaitTillIdle(TtsControl tts)
