@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Threading;
 using System.Xml.Serialization;
 using AI.Talk.Editor;
 using AI.Talk.Editor.Api;
@@ -27,6 +28,11 @@ namespace Microsoft.Xml.Serialization.GeneratedAssembly
 
         public bool TryStartHost()
         {
+            if (SynchronizationContext.Current == null)
+            {
+                return false;
+            }
+
             FieldInfo remoteServiceHostField = null;
             foreach (var fieldInfo in typeof(MainPresenter).GetFields(BindingFlags.NonPublic | BindingFlags.Instance))
             {
